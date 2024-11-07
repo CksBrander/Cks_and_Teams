@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <label for="username">Username:</label>
+            <input
+                name="username"
+                type="text"
+                placeholder="Enter Username : "
+                id="username-field"
+            />
+            <br />
+            <label for="password">Password : </label>
+            <input
+                id="password-field"
+                name="password"
+                type="password"
+                placeholder="Enter Password : "
+            />
+            <div class="btn-container">
+                <button type="submit" id="submit-btn">Submit</button>
+                <button type="submit" id="reset-btn">Reset</button>
+            </div>
+        </div>
+        <script>
+            // to get the data from username and password field
+let submitBtn = document.getElementById("submit-btn");
+let resetBtn = document.getElementById("reset-btn");
+
+// to bind a function with them
+submitBtn.addEventListener("click", () => {
+    let username_data = document.getElementById("username-field").value;
+    let password_data = document.getElementById("password-field").value;
+
+    if (username_data === "AIMLC" && password_data === "AIMLC") {
+        window.location.href = "GeneratorPage.html";
+    } else {
+        alert("Invalid Username or Password");
+    }
+});
+
+resetBtn.addEventListener("click", () => {
+    let username_data = document.getElementById("username-field");
+    let password_data = document.getElementById("password-field");
+    
+});
+        </script>
+    </body>
+</html>
